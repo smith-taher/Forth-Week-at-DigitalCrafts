@@ -1,0 +1,107 @@
+* {
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.body-container {
+    /* display: flex;
+    flex-direction: row; */
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+/*   
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    
+    background-color: lightgrey;
+  /*   padding: 40px; */
+  /* }
+  
+  .nav-item {
+    display: block; 
+    height: 100px;
+    width: 100px;
+  }
+  
+  /* 
+  Proportionally adapt image to its container.
+  That is, assume container controls the actual size.
+  */
+  /* img {
+    width: 100%;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+  }  */
+  
+  .mainImage {
+    display: flex;
+    align-content: stretch;
+    width: 100%;
+    height: 100%;
+    /* width: 10%;
+    height: 10%; */
+    /* padding: 5px;
+    border: .5em solid gray;
+    filter: grayscale(100%);
+    transition: 1s; */ 
+    
+  }
+  .mainImage img {
+    padding: 5px;
+    border: .5em solid gray;
+    width: 100%;
+  }
+  .mainImage:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+  }
+  body {
+    /* display: flex; */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* h1 {
+    text-align: center;
+    color: forestgreen;
+    margin: 30px 0 50px; */ */
+  /* } */
+  .images {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+    
+    /* margin: 10px 50px; */  
+  }
+  .images img{
+    /* display: flex; */
+    /* justify-content: space-around; */
+    width: 15%;
+    /* height: 15%; */
+    padding: 5%;
+    filter: grayscale(100%);
+    transition: 1s;
+  }
+  /* .mainImage img {
+    width: 40%;
+  } */
+  .images:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+  }

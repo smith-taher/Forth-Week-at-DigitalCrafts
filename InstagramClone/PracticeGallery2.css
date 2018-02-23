@@ -1,0 +1,74 @@
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -mox-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body, .container {
+    height: 100%;
+}
+
+body {
+    background: gray;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery {
+    position: relative;
+    display: flex;
+    width: 1000px;
+    height: 450px;
+    background: plum;
+    border: 3px solid #f9f9f8;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.caption-cont {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    width: 800px;
+    height: 100px;
+    bottom: -100;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.main-image-cont:hover .caption-cont {
+    bottom: 0;
+    opacity: 1;
+}
+.caption {
+    font-size: 42px;
+    color: #efff;
+    padding: 10px;
+}
+
+.info {
+    padding: 0 10px;
+    color: #ccc;
+}
+
+.thumbnails {
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.thumbnails img {
+    opacity: .7;
+    cursor: pointer;
+    -webkit-transition: opacity 0.3s ease 0s;
+    -moz-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+}
+
+.thumbnails img:hover {
+    opacity: 1;
+}

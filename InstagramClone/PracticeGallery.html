@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        #lightBoxBg {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 0.5;
+            display: none;
+            background-color: black;
+            height: 100%;
+            width: 100%;
+        }
+        #lightBox {
+            position: absolute;
+            top: 25%;
+            left: 40%;
+            display: none;
+
+        }
+    </style>
+    <script>
+        function startLightBox() {
+            var lbBg = document.getElementById("lightBoxBg");
+            var lb = document.getElementById("lightBox");
+        
+            lbBg.style.display = "block";
+            lb.style.dsiplay = "block";
+        }
+        function dismiss() {
+            var lbBg = document.getElementById("lightBoxBg");
+            var lb = document.getElementById("lightBox");
+        
+            lbBg.style.display = "none";
+            lb.style.dsiplay = "none";
+        }
+    </script>
+</head>
+<body>
+    <div id="lightBoxBg">
+
+    </div>
+    <div id="lightBox" onclick="dismiss()">
+        <img src="Images/cliff.jpg"/>
+    </div>
+    <button onclick="startLightBox()">Light Box</button>
+</body>
+</html>
