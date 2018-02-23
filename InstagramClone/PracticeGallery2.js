@@ -47,17 +47,31 @@ var info = document.getElementById('info');
 var thumbnails = document.getElementById('thumbnails');
 
 function initGallery() {
-    screen.src = images[0].url;
-    caption.textContent = images[0].caption;
-    info.textContent = images[0].info;
+   
+    loadImage(0); 
 
     for(var i = 0; i < images.length; i++) {
         var image = images[i];
         var img = document.createElement('img');
         img.src = images[i].url;
         img.setAttribute('width', '170');
+        img.setAttribute("data-index", i);
+        img.addEventListener('click', changeImage);
         thumbnails.appendChild(img);
     }
+};
+
+function changeImage(event) {
+    var target = event.currentTarget;
+    var index = target.getAttribute("data-index");
+    loadImage(index);
+};
+
+function loadImage(index) {
+    var image = images[index];
+    screen.src = image.url;
+    caption.textContent = image.caption;
+    info.textContent = image.info;
 
 };
 
