@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, Sans-Serif;
+}
+
+#commentFormBG { 
+    display: none;
+    width: 100;
+    height: 100;
+    background-color: black;
+    position: fixed;
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#commentFormFG {
+    display: none;
+    border: 1px solid #ccc;
+    width: 550px;
+    height: 350px;
+    background-color: #fcfcfc;
+    position: fixed;
+    left: 50%;
+    margin-left: -275px;
+    top: 50px;
+}
+
+.commentFormTitle {
+    font-weight: 800;
+    font-size: 25px;
+    color: black;
+}

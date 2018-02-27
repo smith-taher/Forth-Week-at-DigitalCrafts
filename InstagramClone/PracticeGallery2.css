@@ -10,6 +10,7 @@ html, body, .container {
 
 body {
     background: gray;
+    margin: 0;
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
     display: flex;
     width: 1000px;
     height: 450px;
-    background: plum;
+    background: turquoise;
     border: 3px solid #f9f9f8;
     border-radius: 5px;
     overflow: hidden;
@@ -72,3 +73,34 @@ body {
 .thumbnails img:hover {
     opacity: 1;
 }
+
+
+
+/* LightBox */
+
+/* #commentFormBG { 
+    width: 100;
+    height: 100;
+    background-color: black;
+    position: fixed;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+#commentFormFG {
+    border: 1px solid #ccc;
+    width: 550px;
+    height: 350px;
+    background-color: #fcfcfc;
+    position: fixed;
+    left: 50%;
+    margin-left: -275px;
+    top: 50px;
+}
+/* .commentFormTitle {
+    font-weight: 800;
+    font-size: 25px;
+    color
+} */ 
