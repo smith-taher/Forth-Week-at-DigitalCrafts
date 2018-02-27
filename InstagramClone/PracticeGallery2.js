@@ -1,4 +1,4 @@
-var images = [
+var $images = [
 {
     url: "Images/boat.jpg",
     caption: "Sail Boat",
@@ -41,38 +41,39 @@ var images = [
 },
 ];
 
-var screen = document.getElementById('screen');
-var caption = document.getElementById('caption');
-var info = document.getElementById('info');
-var thumbnails = document.getElementById('thumbnails');
+var $screen = $('.screen');
+var $caption = $('.caption');
+var $info = $('.info');
+var $thumbnails = $('.thumbnails');
 
-function initGallery() {
+// function initGallery() {
    
-    loadImage(0); 
+//     loadImage(0); 
 
-    for(var i = 0; i < images.length; i++) {
-        var image = images[i];
-        var img = document.createElement('img');
-        img.src = images[i].url;
-        img.setAttribute('width', '170');
-        img.setAttribute("data-index", i);
-        img.addEventListener('click', changeImage);
-        thumbnails.appendChild(img);
-    }
-};
+//     for(var i = 0; i < $images.length; i++) {
+//         var image = $images[i];
+//         var img = document.createElement('img');
+//         img.src = $images[i].url;
+//         img.setAttribute('width', '170');
+//         img.setAttribute("data-index", i);
+//         img.addEventListener('click', changeImage);
+//         thumbnails.appendChild(img);
+//     }
+// };
 
-function changeImage(event) {
-    var target = event.currentTarget;
-    var index = target.getAttribute("data-index");
-    loadImage(index);
-};
+$thumbnails.on('click', 'a', function (e) {
+    e.preventDefault();
+    var target = $(this).this.attr('url');
+    $images.attr('url', big);
+    $screen.attr('data-index');
+});
 
-function loadImage(index) {
-    var image = images[index];
-    screen.src = image.url;
-    caption.textContent = image.caption;
-    info.textContent = image.info;
+// function loadImage(index) {
+//     var image = images[index];
+//     screen.src = image.url;
+//     caption.textContent = image.caption;
+//     info.textContent = image.info;
 
-};
+// };
 
-initGallery();
+// initGallery();
